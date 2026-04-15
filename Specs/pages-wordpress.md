@@ -11,7 +11,7 @@
 - **URL d'origine** : https://autourdunemousse.fr/autour-dune-mousse-episode-ii
 - **Images détectées** :
   - https://assets.zyrosite.com/sPyReSixwgGH10vr/profile-pic-2-Vfes75D6GnwvWprW.png | alt: "Guru Bhai — Architecte de sens"
-  - https://assets.zyrosite.com/sPyReSixwgGH10vr/guru-bhai-hal-rnZYKSjalSmE9GqF.jpeg | alt: "Guru Bhai et Hal — deux compères, un verre à la main"
+  - https://assets.zyrosite.com/sPyReSixwgGH10vr/guru-bhai-hal-rnZYKSjalSmE9GqF.jpeg | alt: "Guru Bhai et Hale — deux compères, un verre à la main"
   - https://assets.zyrosite.com/sPyReSixwgGH10vr/hops-2-oEM2fRUqxCZxlbzE.png | alt: "Le houblon — l'amertume nécessaire"
 - **Audio / player détecté** : Vidéo YouTube https://youtu.be/66AEBRyk_3s?si=ryrEgmVmN3Hqb585
 
@@ -42,7 +42,7 @@
 
 <!-- wp:paragraph --><p><strong>Guru Bhai</strong><br>Hôte. Gardien de l'exigence intellectuelle. Philosophe de la mousse.</p><!-- /wp:paragraph -->
 
-<!-- wp:paragraph --><p><strong>H — Hal</strong><br>Monteur, explorateur de brasseries. Perfectionniste du setup. Voyageur.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p><strong>H — Hale</strong><br>Monteur, explorateur de brasseries. Perfectionniste du setup. Voyageur.</p><!-- /wp:paragraph -->
 
 <!-- wp:separator --><hr class="wp-block-separator"/><!-- /wp:separator -->
 
@@ -83,7 +83,7 @@
 <!-- wp:heading {"level":2} --><h2>La géographie dans le verre</h2><!-- /wp:heading -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/guru-bhai-hal-rnZYKSjalSmE9GqF.jpeg" alt="Guru Bhai et Hal — deux compères, un verre à la main"/></figure>
+<figure class="wp-block-image size-large"><img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/guru-bhai-hal-rnZYKSjalSmE9GqF.jpeg" alt="Guru Bhai et Hale — deux compères, un verre à la main"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:quote --><blockquote class="wp-block-quote"><p>« À l'abbaye d'Orval, j'ai vu des chaudrons en cuivre. Ce n'est pas anecdotique. Le matériau change le produit. Le territoire entre dans la bière. »</p></blockquote><!-- /wp:quote -->
@@ -128,7 +128,7 @@
 - **Slug WordPress proposé** : autour-dune-mousse-a-la-source-episode-3
 - **URL d'origine** : https://autourdunemousse.fr/autour-dune-mousse-a-la-source-episode-3
 - **Images détectées** :
-  - https://assets.zyrosite.com/sPyReSixwgGH10vr/brasserie-de-treivire-vwNNrTfxDxKyuBzj.png | alt: "Guru Bhai, Yves Cornerotte et Hal — Brasserie des Trévires, Lamorteau"
+  - https://assets.zyrosite.com/sPyReSixwgGH10vr/brasserie-de-treivire-vwNNrTfxDxKyuBzj.png | alt: "Guru Bhai, Yves Cornerotte et Hale — Brasserie des Trévires, Lamorteau"
   - https://assets.zyrosite.com/sPyReSixwgGH10vr/profile-pic-2-Vfes75D6GnwvWprW.png | alt: "Guru Bhai — Architecte de sens"
   - https://assets.zyrosite.com/sPyReSixwgGH10vr/img_6287-to8AHVYW1gBag42w.jpg | alt: "Dans la salle de brassage — Brasserie des Trévires"
   - https://assets.zyrosite.com/sPyReSixwgGH10vr/autour-d-une-mousse-v6bJ3FaXsDTsRdii.png | alt: "Autour d'une mousse — la brasserie comme espace de pensée"
@@ -168,7 +168,7 @@
 <!-- wp:separator --><hr class="wp-block-separator"/><!-- /wp:separator -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/brasserie-de-treivire-vwNNrTfxDxKyuBzj.png" alt="Guru Bhai, Yves Cornerotte et Hal — Brasserie des Trévires, Lamorteau"/></figure>
+<figure class="wp-block-image size-large"><img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/brasserie-de-treivire-vwNNrTfxDxKyuBzj.png" alt="Guru Bhai, Yves Cornerotte et Hale — Brasserie des Trévires, Lamorteau"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph --><p>On ne cherchait pas une brasserie. On cherchait une source.</p><!-- /wp:paragraph -->

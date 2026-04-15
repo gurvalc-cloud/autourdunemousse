@@ -1,0 +1,151 @@
+/*
+Theme Name: Autour d'une Mousse
+Theme URI: https://autourdunemousse.fr
+Author: Guru Bhai
+Author URI: https://autourdunemousse.fr
+Description: Thème parchemin, typographie machine à écrire, pour "Autour d'une mousse" — un espace pour celles et ceux qui pensent encore quand les réponses deviennent floues. Site qui se parcourt comme un parchemin, sans menu.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: autour-dune-mousse
+*/
+
+:root {
+    --fond: #f6eee3;
+    --texte: #35282C;
+    --accent: #DBA472;
+    --secondaire: #F9D0AE;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    background-color: var(--fond);
+    color: var(--texte);
+    line-height: 1.7;
+    padding: 2rem 1.5rem 4rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--texte);
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+}
+
+p { margin-bottom: 1.5rem; }
+
+em { font-style: italic; color: var(--accent); }
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+}
+a:hover { color: var(--texte); border-bottom-color: var(--texte); }
+
+hr {
+    border: none;
+    border-top: 1px solid var(--secondaire);
+    margin: 3rem 0;
+}
+
+img { max-width: 100%; height: auto; }
+
+.header-image { width: 100%; margin-bottom: 2rem; }
+.header-image img { width: 100%; height: auto; display: block; }
+
+.subtitle {
+    font-family: 'Courier Prime', monospace;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.image-break { margin: 3rem 0; text-align: center; }
+.image-break img { max-width: 100%; height: auto; }
+
+.image-break.circular img {
+    border-radius: 50%;
+    max-width: 280px;
+    border: 3px solid var(--accent);
+}
+.image-break.portrait img { max-width: 100%; filter: contrast(1.1); }
+.image-break.engraving img { max-width: 100%; opacity: 0.95; }
+
+.signature {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--secondaire);
+}
+.signature p { margin-bottom: 0.5rem; font-size: 0.9rem; }
+.signature .name { font-family: 'Special Elite', cursive; font-size: 1.1rem; margin-bottom: 0.3rem; }
+.signature .title { color: var(--accent); font-style: italic; }
+
+.element { margin-bottom: 1rem; }
+.element strong { color: var(--accent); font-weight: normal; }
+
+.site-footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--secondaire);
+    font-size: 0.85rem;
+    color: var(--accent);
+}
+.site-footer nav { margin-top: 1rem; }
+.site-footer nav a { margin-right: 1.5rem; }
+
+.center-italic {
+    text-align: center;
+    font-style: italic;
+    color: var(--accent);
+}
+
+/* WordPress alignment helpers */
+.alignleft { float: left; margin-right: 1.5em; }
+.alignright { float: right; margin-left: 1.5em; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.wp-block-image { margin: 2rem 0; }
+.screen-reader-text {
+    border: 0; clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%); clip-path: inset(50%);
+    height: 1px; margin: -1px; overflow: hidden; padding: 0;
+    position: absolute; width: 1px; word-wrap: normal !important;
+}
+
+@media (max-width: 600px) {
+    html { font-size: 16px; }
+    body { padding: 1.5rem 1rem 3rem; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.15rem; }
+    .image-break.circular img { max-width: 220px; }
+}

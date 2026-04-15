@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autour d'une Mousse — Constitution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --fond: #f6eee3;
+        --texte: #35282c;
+        --accent: #dba472;
+        --secondaire: #f9d0ae;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 18px;
+      }
+
+      body {
+        font-family: "Courier Prime", "Courier New", monospace;
+        background-color: var(--fond);
+        color: var(--texte);
+        line-height: 1.7;
+        padding: 2rem 1.5rem 4rem;
+        max-width: 680px;
+        margin: 0 auto;
+      }
+
+      /* ── En-tête Constitution ── */
+      .constitution-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid var(--accent);
+        margin-top: 2rem;
+      }
+
+      .constitution-header .ornament {
+        font-size: 1.4rem;
+        color: var(--accent);
+        letter-spacing: 0.5em;
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        font-family: "Special Elite", cursive;
+        font-size: 2rem;
+        font-weight: normal;
+        margin-bottom: 0.3rem;
+        letter-spacing: 0.05em;
+      }
+
+      .doc-title {
+        font-family: "Special Elite", cursive;
+        font-size: 1.5rem;
+        font-weight: normal;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .doc-subtitle {
+        font-style: italic;
+        color: var(--accent);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      /* ── Titres de sections ── */
+      .section-number {
+        font-family: "Special Elite", cursive;
+        font-size: 1rem;
+        color: var(--accent);
+        text-align: center;
+        letter-spacing: 0.3em;
+        margin-bottom: 0.3rem;
+      }
+
+      h2 {
+        font-family: "Special Elite", cursive;
+        font-size: 1.3rem;
+        font-weight: normal;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        color: var(--texte);
+        letter-spacing: 0.02em;
+      }
+
+      h2.centered {
+        text-align: center;
+      }
+
+      h3 {
+        font-family: "Special Elite", cursive;
+        font-size: 1.05rem;
+        font-weight: normal;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--texte);
+      }
+
+      /* ── Paragraphes ── */
+      p {
+        margin-bottom: 1.5rem;
+      }
+
+      em {
+        font-style: italic;
+        color: var(--accent);
+      }
+
+      /* ── Séparateurs ── */
+      hr {
+        border: none;
+        border-top: 1px solid var(--secondaire);
+        margin: 3rem 0;
+      }
+
+      .diamond-separator {
+        text-align: center;
+        color: var(--accent);
+        font-size: 0.9rem;
+        letter-spacing: 0.8em;
+        margin: 3rem 0;
+      }
+
+      /* ── Préambule ── */
+      .preamble {
+        position: relative;
+        padding-left: 1.5rem;
+        border-left: 2px solid var(--accent);
+        margin: 2rem 0 3rem;
+      }
+
+      .preamble p {
+        font-size: 0.95rem;
+      }
+
+      .preamble p:first-child::first-letter {
+        font-family: "Special Elite", cursive;
+        font-size: 2.8rem;
+        float: left;
+        line-height: 1;
+        margin-right: 0.15rem;
+        margin-top: 0.05rem;
+        color: var(--accent);
+      }
+
+      /* ── Valeurs ── */
+      .valeur {
+        margin-bottom: 1.2rem;
+      }
+
+      .valeur strong {
+        font-family: "Special Elite", cursive;
+        color: var(--accent);
+        font-weight: normal;
+        font-size: 1rem;
+      }
+
+      /* ── Listes ── */
+      .liste-diamant,
+      .liste-losange {
+        margin-bottom: 1.5rem;
+      }
+
+      .liste-diamant .item,
+      .liste-losange .item {
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 0.8rem;
+        line-height: 1.6;
+      }
+
+      .liste-diamant .item::before {
+        content: "◆";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-size: 0.7rem;
+        top: 0.35rem;
+      }
+
+      .liste-losange .item::before {
+        content: "⬥";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-size: 0.75rem;
+        top: 0.3rem;
+      }
+
+      /* ── Épilogue ── */
+      .epilogue {
+        text-align: center;
+        margin: 3rem 0;
+        line-height: 2;
+        font-style: italic;
+        color: var(--texte);
+      }
+
+      .epilogue em {
+        color: var(--accent);
+      }
+
+      /* ── Image ── */
+      .image-break {
+        margin: 3rem 0;
+        text-align: center;
+      }
+
+      .image-break img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .image-break.circular img {
+        border-radius: 50%;
+        max-width: 280px;
+        border: 3px solid var(--accent);
+      }
+
+      /* ── Footer ── */
+      footer {
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--secondaire);
+        font-size: 0.85rem;
+        color: var(--accent);
+        text-align: center; /* Centre le texte principal du footer */
+      }
+
+      footer nav {
+        margin-top: 1rem;
+        text-align: center; /* Centre les liens Manifeste et Constitution */
+      }
+
+      footer nav a {
+        margin: 0 0.75rem; /* Espace égal à gauche et à droite */
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid var(--accent);
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 600px) {
+        html {
+          font-size: 16px;
+        }
+        body {
+          padding: 1.5rem 1rem 3rem;
+        }
+        h1 {
+          font-size: 1.6rem;
+        }
+        .doc-title {
+          font-size: 1.2rem;
+        }
+        h2 {
+          font-size: 1.15rem;
+        }
+        .image-break.circular img {
+          max-width: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="constitution-header">
+      <div class="ornament">◆ ◆ ◆</div>
+      <h1>Autour d'une Mousse</h1>
+      <div class="doc-title">Constitution</div>
+      <p class="doc-subtitle">
+        Vision, principes et engagements pour un écosystème durable<br />autour
+        des savoir-faire brassicoles.
+      </p>
+    </div>
+
+    <h2 class="centered">Préambule</h2>
+
+    <div class="preamble">
+      <p>
+        La France, et plus largement l'Europe, est une terre de savoir-faire.
+        Particulièrement dans le monde de la bière, et ce depuis des
+        millénaires. Certes, cette boisson n'a pas toujours pris la forme qu'on
+        lui connaît aujourd'hui, ni réuni l'ensemble des expertises nécessaires
+        à sa réalisation. Néanmoins, son essence s'est transmise à travers le
+        temps, portée par les mains, les palais et les convictions de celles et
+        ceux qui ont cru en sa valeur.
+      </p>
+      <p>
+        Jamais cette mousse n'a été autant d'actualité. Combien de brasseries
+        pouvons-nous compter dans un périmètre de trente-trois kilomètres ?
+        Suffisamment pour fournir la demande, qui, plus que jamais, souffre de
+        la concurrence et du déclin de nos lieux de rendez-vous sociaux : les
+        cafés et les bars. Il y a une certaine logique dans tout cela. Le trop
+        tue le trop, et nos modes de consommation changent.
+      </p>
+      <p>
+        Pendant bien longtemps, l'eau n'était pas potable et il était préférable
+        de boire une boisson fermentée. Et par la même occasion, de créer du
+        lien et de sociabiliser, autour d'une mousse. Aujourd'hui, ce qui est
+        recherché est la qualité, car les acteurs présents, obligés de
+        s'adapter, se livrent une guerre sans merci.
+      </p>
+      <p>
+        Mais ne pouvons-nous pas en conclure que cette mousse est notre avantage
+        comparatif ? Sachant que le monde est devenu un marché et que, plus que
+        jamais, le lien est nécessaire.
+      </p>
+      <p>
+        Réfléchissons un instant. La bière, c'est principalement de l'eau et un
+        contenant, souvent lourd et volumineux. Le produit en lui-même est
+        difficilement exportable. Il nous reste le savoir-faire, et j'entends
+        par là, la recette, le geste, le rituel. Néanmoins, sachant
+        l'investissement initial, le graal des nouveaux marchés semble
+        compromis. Le risque est important ; cela cause une saturation de nos
+        marchés, sans possibilité de pérenniser l'activité.
+      </p>
+      <p>
+        Rien qu'en France, pas moins de deux cents brasseries ferment leurs
+        portes chaque année. Non pas par manque de qualité, bien que nous ne
+        puissions jamais le vérifier, mais par l'impossibilité de rencontrer
+        leur marché. C'est regrettable. La substance même du mal de la
+        compétition, alors même que l'émulation, cette compétition positive, est
+        trop souvent oubliée.
+      </p>
+      <p>
+        Cela a pour effet de laisser la mainmise du marché aux mastodontes de la
+        bière, qui se gavent de produits standardisés dépourvus d'âme. Si nous
+        prenons la métaphore de notre système solaire, il lui a fallu quelques
+        millions d'années pour se structurer, soit deux mois rapportés à la vie
+        d'un homme, pour que le soleil capte pas moins de quatre-vingt-quinze
+        pour cent de sa masse totale. Sur ce phénomène cosmique, nous ne pouvons
+        rien changer. Ce n'est pas le cas de cette boisson que certains
+        qualifient de lubrifiant social.
+      </p>
+      <p>
+        Alors même que cette industrie brasse des milliards, elle étouffe les
+        petits avec malice, par les contrats brasseurs imposés aux bars, voire,
+        dans certaines conditions, par des monopoles de fait. Car une fois la
+        machine établie, l'argent coule à flot.
+      </p>
+      <p>
+        Il faut libérer la pression. Ouvrir les robinets de la coopération pour
+        faire rayonner cette constellation qui est un avantage comparatif et
+        représentatif de la diversité créative d'un ensemble de corps de métiers
+        et de secteurs variés. Cette mousse doit redevenir ce lien social de
+        toutes les strates et ruisseler pour tous. Sans producteurs, pas de
+        consommateurs, et vice versa.
+      </p>
+      <p>
+        Maintenant que nous avons verticalisé ce métier, il faut regarder à
+        l'horizon. Par-delà les océans et les montagnes. Trouver ensemble une
+        solution coopérative pour amener cette mousse et son pouvoir, non sans
+        lois, au plus près des citoyens du monde, désireux de se réunir autour
+        d'un rituel qui insuffle la fraternité et la modération. Une quête
+        jonchée d'obstacles posés par l'humain et le monde moderne compétitif.
+        Prenons néanmoins ce libéralisme comme atout. Entreprenons cette
+        aventure humaine.
+      </p>
+    </div>
+
+    <div class="diamond-separator">◆ ◆ ◆</div>
+
+    <div class="section-number">I</div>
+    <h2 class="centered">Dispositions fondamentales</h2>
+
+    <h3>Établissement et durée</h3>
+    <p>
+      La présente Constitution est établie pour une période symbolique de sept
+      ans, commençant en 2026 et s'achevant en 2033.
+    </p>
+
+    <h3>Vision</h3>
+    <p>
+      La vision de ce projet est de développer un écosystème durable autour des
+      savoir-faire brassicoles et de leur exportation à l'international.
+    </p>
+
+    <h3>Mission</h3>
+    <p>
+      Notre mission est de créer un environnement favorable à l'émulation autour
+      d'une mousse.
+    </p>
+
+    <div class="diamond-separator">◆ ◆ ◆</div>
+
+    <div class="section-number">II</div>
+    <h2 class="centered">Valeurs et principes directeurs</h2>
+
+    <div class="valeur">
+      <strong>Innovation.</strong> Repousser les frontières des pratiques et des
+      procédés.
+    </div>
+    <div class="valeur">
+      <strong>Durabilité.</strong> Conduire toutes nos activités avec une
+      attention constante à l'impact environnemental.
+    </div>
+    <div class="valeur">
+      <strong>Collectif.</strong> Croire en la puissance de la coopération.
+    </div>
+    <div class="valeur">
+      <strong>Qualité.</strong> L'excellence et la constance sont primordiales.
+    </div>
+    <div class="valeur">
+      <strong>Éthique.</strong> Adhérer aux plus hauts standards de conduite.
+    </div>
+    <div class="valeur">
+      <strong>Harmonie.</strong> Rechercher l'équilibre et le juste milieu.
+    </div>
+    <div class="valeur">
+      <strong>Honneur.</strong> Porter avec fierté l'héritage brassicole.
+    </div>
+    <div class="valeur">
+      <strong>Humanité.</strong> Placer l'humain au centre de chaque initiative.
+    </div>
+
+    <div class="diamond-separator">◆ ◆ ◆</div>
+
+    <div class="section-number">III</div>
+    <h2 class="centered">Périmètre et écosystème</h2>
+
+    <div class="liste-diamant">
+      <div class="item">
+        La valorisation et l'exportation des savoir-faire brassicoles.
+      </div>
+      <div class="item">Le développement de partenariats stratégiques.</div>
+      <div class="item">La recherche et l'innovation constante.</div>
+      <div class="item">La création de lieux favorisant le lien social.</div>
+    </div>
+
+    <div class="diamond-separator">◆ ◆ ◆</div>
+
+    <div class="section-number">IV</div>
+    <h2 class="centered">Gouvernance et fonctionnement</h2>
+    <p>
+      La gouvernance du projet sera assurée par un comité de pilotage composé de
+      représentants des parties prenantes clés. Les décisions majeures seront
+      prises de manière collaborative.
+    </p>
+
+    <div class="diamond-separator">◆ ◆ ◆</div>
+
+    <div class="section-number">V</div>
+    <h2 class="centered">Engagements et clauses protectrices</h2>
+    <p>
+      La présente Constitution est un document directeur qui expose la vision et
+      les engagements partagés pour le succès du projet « Autour d'une Mousse ».
+    </p>
+
+    <div class="diamond-separator">◆ ◆ ◆</div>
+
+    <div class="epilogue">
+      <p>Depuis la lumière à la matière, jusqu'à l'être.</p>
+      <p>Le cycle de la création.</p>
+      <p>Vers un objectif plus noble,</p>
+      <p>Qui lie dans l'harmonie.</p>
+      <p>L'équilibre. Le juste milieu.</p>
+      <p>Autour de ce qui compte, au bon moment.</p>
+      <p>L'art de relier les contes et les histoires,</p>
+      <p>L'espace d'un temps.</p>
+      <p>Universelle et de fines bulles.</p>
+      <p>Le quaternaire rencontre les sens.</p>
+      <p><em>Le trinitaire, l'essence de l'esprit.</em></p>
+    </div>
+
+    <hr />
+
+    <div class="image-break circular">
+      <img
+        src="https://assets.zyrosite.com/sPyReSixwgGH10vr/chatgpt-image-21-janv.-2026-23_26_29-IIGwAXGUWK0sZLMx.png"
+        alt="Autour d'une mousse, le rituel"
+      />
+    </div>
+
+    <footer>
+      <p>Constitution — Autour d'une Mousse — 2026–2033</p>
+    </footer>
+  </body>
+</html>

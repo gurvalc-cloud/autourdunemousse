@@ -1,0 +1,46 @@
+/* Utility classes - small, atomic helpers */
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.mt-sm {
+  margin-top: var(--space-sm) !important;
+}
+.mt-md {
+  margin-top: var(--space-md) !important;
+}
+.mb-sm {
+  margin-bottom: var(--space-sm) !important;
+}
+.p-sm {
+  padding: var(--space-sm) !important;
+}
+.p-md {
+  padding: var(--space-md) !important;
+}
+
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+/* small responsive helper */
+.hide-sm {
+  display: inline-block;
+}
+@media (max-width: 520px) {
+  .hide-sm {
+    display: none !important;
+  }
+}

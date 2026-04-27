@@ -1,99 +1,735 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/webp" href="/favicon.webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="À la source. Une rencontre à la Brasserie des Trévires pour penser le territoire, la mémoire et l'identité en bière. Épisode III." />
-    <meta property="og:title" content="Épisode III · À la source | Autour d'une Mousse" />
-    <meta property="og:description" content="À la source. Une rencontre à la Brasserie des Trévires pour penser le territoire, la mémoire et l'identité en bière. Épisode III." />
-    <meta property="og:image" content="https://assets.zyrosite.com/sPyReSixwgGH10vr/img_6287-to8AHVYW1gBag42w.jpg" />
-    <meta property="og:url" content="https://autourdunemousse.fr/episode-iii.html" />
-    <meta property="og:type" content="article" />
-    <meta name="twitter:card" content="summary_large_image" />
-  <title>Épisode III | Autour d'une Mousse</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Épisode III — À la source · Autour d'une Mousse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fond: #f6eee3;
+            --texte: #35282C;
+            --accent: #DBA472;
+            --secondaire: #F9D0AE;
+            --ombre: rgba(219, 164, 114, 0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { font-size: 18px; }
+
+        body {
+            font-family: 'Courier Prime', 'Courier New', monospace;
+            background-color: var(--fond);
+            color: var(--texte);
+            line-height: 1.7;
+            padding: 2rem 1.5rem 4rem;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* ——— EN-TÊTE ——— */
+        .episode-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+        }
+
+        h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.85rem;
+            font-weight: normal;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.02em;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.25rem;
+            font-weight: normal;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--texte);
+            letter-spacing: 0.02em;
+        }
+
+        p { margin-bottom: 1.5rem; }
+
+        em { font-style: italic; color: var(--accent); }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+        }
+
+        a:hover { color: var(--texte); border-bottom-color: var(--texte); }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--secondaire);
+            margin: 3rem 0;
+        }
+
+        /* ——— SUBTITLE ——— */
+        .subtitle {
+            font-family: 'Courier Prime', monospace;
+            font-style: italic;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .episode-meta {
+            font-size: 0.82rem;
+            color: var(--accent);
+            opacity: 0.75;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* ——— HEADER IMAGE ——— */
+        .header-image {
+            width: 100%;
+            margin-bottom: 2.5rem;
+        }
+
+        .header-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ——— VIDÉO ——— */
+        .video-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin: 2.5rem 0;
+            border: 1px solid var(--secondaire);
+            background: var(--texte);
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-mention {
+            text-align: center;
+            font-style: italic;
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin: 2.5rem 0 1rem;
+        }
+
+        /* ——— BIÈRE DU JOUR ——— */
+        .biere-du-jour {
+            border: 1px solid var(--secondaire);
+            background: linear-gradient(135deg, rgba(249, 208, 174, 0.18) 0%, transparent 60%);
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            position: relative;
+        }
+
+        .biere-du-jour::before {
+            content: "BIÈRE DU JOUR";
+            position: absolute;
+            top: -0.6rem;
+            left: 1.2rem;
+            background: var(--fond);
+            padding: 0 0.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .biere-nom {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: var(--texte);
+        }
+
+        .biere-detail {
+            font-size: 0.88rem;
+            color: var(--accent);
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* ——— INTERVENANTS ——— */
+        .intervenants {
+            display: flex;
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .intervenant {
+            flex: 1;
+            border-top: 2px solid var(--accent);
+            padding-top: 1rem;
+        }
+
+        .intervenant-nom {
+            font-family: 'Special Elite', cursive;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            color: var(--texte);
+        }
+
+        .intervenant-role {
+            font-size: 0.82rem;
+            color: var(--accent);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ——— LIEU ——— */
+        .lieu-encart {
+            border: 1px solid var(--secondaire);
+            background: linear-gradient(135deg, rgba(249, 208, 174, 0.10) 0%, transparent 60%);
+            padding: 1.4rem 1.6rem;
+            margin: 2.5rem 0;
+            position: relative;
+        }
+
+        .lieu-encart::before {
+            content: "LE LIEU";
+            position: absolute;
+            top: -0.6rem;
+            left: 1.2rem;
+            background: var(--fond);
+            padding: 0 0.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .lieu-nom {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .lieu-detail {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-style: italic;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* ——— QUESTION CENTRALE ——— */
+        .question-centrale {
+            border-left: 3px solid var(--accent);
+            padding: 1.2rem 1.5rem;
+            margin: 2.5rem 0;
+            background: var(--ombre);
+        }
+
+        .question-centrale p {
+            margin-bottom: 0;
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.65;
+        }
+
+        /* ——— VERBATIM ——— */
+        .verbatim {
+            margin: 2.5rem 0;
+            padding: 0 1rem;
+        }
+
+        .verbatim-ligne {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+            align-items: flex-start;
+        }
+
+        .verbatim-locuteur {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.82rem;
+            color: var(--accent);
+            white-space: nowrap;
+            padding-top: 0.15rem;
+            min-width: 2.8rem;
+        }
+
+        .verbatim-parole {
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--texte);
+            margin-bottom: 0;
+        }
+
+        /* ——— IMAGES ——— */
+        .image-break {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .image-break img { max-width: 100%; height: auto; }
+
+        .image-break.circular img {
+            border-radius: 50%;
+            max-width: 260px;
+            border: 3px solid var(--accent);
+        }
+
+        .image-break.portrait img {
+            max-width: 100%;
+            filter: contrast(1.1);
+        }
+
+        .image-break.engraving img {
+            max-width: 100%;
+            opacity: 0.95;
+        }
+
+        .image-caption {
+            margin-top: 0.8rem;
+            font-size: 0.82rem;
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        /* ——— GRILLE TENSIONS ——— */
+        .grille-tension { margin: 2.5rem 0; }
+
+        .tension-item {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 0.8rem;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+        }
+
+        .tension-gauche {
+            text-align: right;
+            color: var(--texte);
+            font-style: italic;
+        }
+
+        .tension-fleche { color: var(--accent); font-size: 1.1rem; }
+
+        .tension-droite {
+            color: var(--accent);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* ——— CONCLUSION ——— */
+        .conclusion-finale {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin: 3rem 0;
+            border-top: 1px solid var(--secondaire);
+            border-bottom: 1px solid var(--secondaire);
+        }
+
+        .conclusion-finale p {
+            font-style: italic;
+            color: var(--accent);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        /* ——— PROCHAINEMENT ——— */
+        .prochainement {
+            background: linear-gradient(135deg, rgba(219, 164, 114, 0.08) 0%, transparent 80%);
+            border: 1px solid var(--secondaire);
+            padding: 1.6rem 1.8rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .prochainement::before {
+            content: "PROCHAIN ÉPISODE";
+            position: absolute;
+            top: -0.6rem;
+            left: 1.2rem;
+            background: var(--fond);
+            padding: 0 0.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .prochainement p {
+            margin-bottom: 0.5rem;
+            font-size: 0.92rem;
+        }
+
+        .prochainement p:last-child { margin-bottom: 0; }
+
+        /* ——— SIGNATURE & FOOTER ——— */
+        .signature {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--secondaire);
+        }
+
+        .signature p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .signature .name {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .signature .title {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--secondaire);
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        footer nav { margin-top: 1rem; }
+
+        footer nav a {
+            margin-right: 1.5rem;
+            border-bottom: none;
+        }
+
+        footer nav a:hover { border-bottom: 1px solid var(--texte); }
+
+        /* ——— RESPONSIVE ——— */
+        @media (max-width: 600px) {
+            html { font-size: 16px; }
+            body { padding: 1.5rem 1rem 3rem; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.1rem; }
+
+            .intervenants { flex-direction: column; gap: 1.5rem; }
+
+            .tension-item { grid-template-columns: 1fr; text-align: left; }
+            .tension-gauche { text-align: left; }
+            .tension-fleche { display: none; }
+
+            .image-break.circular img { max-width: 200px; }
+        }
+    </style>
 </head>
 <body>
 
-  <main class="container">
-    <article class="content-card">
-      <h1>À la source</h1>
-      <p class="subtitle"><em>Autour d'une mousse · Épisode III</em></p>
-      <p>La bière naît d'un territoire. Et d'une décision.</p>
-      <p>Tourné à la Brasserie des Trévires · Lamorteau, Gaume, Belgique · 2026</p>
+    <!-- EN-TÊTE -->
+    <p class="episode-label">Autour d'une mousse · Épisode III</p>
 
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube.com/embed/-TadM467o04"
-          title="Autour d'une mousse · Épisode III : À la source"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+    <h1>À la source</h1>
+    <p class="subtitle">La bière naît d'un territoire. Et d'une décision.</p>
+    <p class="episode-meta">Tourné à la Brasserie des Trévires · Lamorteau, Gaume, Belgique · 2026</p>
 
-      <hr />
+    <hr>
 
-      <h3>La bière du soir</h3>
-      <p><strong>Brune de Noël</strong><br />Bière artisanale de saison · Malts caramel, cannelle, fèves de cacao, rhum à la vanille, cassonade · Brassée à Lamorteau, Province de Luxembourg, Belgique<br /><em>Explorez la magie de Noël dans chaque gorgée, riche et subtilement épicée. Une création festive et inoubliable.</em></p>
-      <hr />
-
-      <h3>Les participants</h3>
-      <p><img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/profile-pic-2-Vfes75D6GnwvWprW.png" alt="Guru Bhai, Architecte de sens" class="aligncenter" /></p>
-      <p><strong>Guru Bhai</strong><br />Hôte. Gardien de l'exigence intellectuelle. Philosophe de la mousse.</p>
-      <p><strong>Hale</strong><br />Frère de pensée. Co-créateur. Passionné capteur de lumière.</p>
-      <p><strong>Yves Cornerotte</strong><br />Co-fondateur &amp; brasseur, Brasserie des Trévires. À moitié Charentais. Entièrement Gaumais.</p>
-      <p><strong>Brasserie des Trévires</strong><br />Zone artisanale de Lamorteau, Rouvroy · Province de Luxembourg, Gaume, Belgique<br />Fondée en octobre 2018 · Écoresponsable · Médaillée d'or au Concours International de Lyon<br />La plus méridionale des brasseries de Belgique.</p>
-      <hr />
-
-      <p>On ne cherchait pas une brasserie. On cherchait une source.</p>
-      <p>Après l'épisode II tourné dans la brume de La Loge, il fallait aller voir. Quitter la théorie. Mettre les pieds dans le moût. Comprendre comment les quatre éléments, <em>eau, malt, houblon, levure</em>, deviennent quelque chose qui porte un nom, un visage, un territoire.</p>
-      <p>La réponse était en Gaume. À Lamorteau. À quelques kilomètres de la frontière luxembourgeoise. Dans ce coin de Belgique que les Celtes Trévires ont habité deux mille ans avant nous, et dont le sol garde encore la mémoire. C'est là qu'Yves Cornerotte brasse. Avec Fabien et Michel. Depuis 2018. C'est là qu'on a posé les verres. Et les questions.</p>
-      <p>Comment un brasseur décide-t-il de ce qu'il va mettre dans sa bière ? Où s'arrête la recette et où commence la vision ? Et qu'est-ce qu'un territoire a à faire dans un verre ?</p>
-      <h2>Les Trévires, un nom, une dette</h2>
-      <p>Le nom de la brasserie n'est pas une fantaisie marketing. Les Trévires étaient un peuple celte établi en Gaule belgique, dans cette région qu'on appelle aujourd'hui la Gaume. Reconnus dans l'Antiquité pour leur maîtrise agricole et leurs techniques de moisson. Une moissonneuse gauloise, découverte en 1958 à Montauban-Buzenol, porte encore leur empreinte dans la pierre.</p>
-      <p>Choisir ce nom, c'est assumer une filiation. Ce n'est pas un hommage décoratif. C'est une déclaration d'intention : nous brassons avec la même logique que ceux qui, avant nous, ont travaillé la terre de ce sol. <em>Recevoir. Transformer. Transmettre.</em></p>
-      <p>Comme si la philosophie du brassage précédait le brassage lui-même.</p>
-      <h2>Le cognac dans la bière, ou l'héritage personnel</h2>
-      <p>La Recevresse est la bière signature d'Yves. Et elle contient du Cognac XO. Pas par hasard. Pas par goût de l'originalité. Parce qu'Yves est à moitié Charentais. Parce que son identité est une carte à deux entrées, la Gaume et la Charente, et qu'il a voulu que les deux se retrouvent dans le même verre.</p>
-      <p>C'est là que la bière devient autobiographie. Le malt belge porte le territoire. Le cognac porte l'histoire personnelle. Et l'assemblage, cet acte de brasseur qui décide que ces deux choses peuvent coexister, est un acte de sens autant que de chimie. Il ne brasse pas une recette. Il brasse une vie.</p>
-      <h2>Ce qui s'est dit, à Lamorteau</h2>
-      <p><img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/img_6287-to8AHVYW1gBag42w.jpg" alt="Dans la salle de brassage, Brasserie des Trévires" class="aligncenter" /></p>
-      <p>Ce soir, la bière n'était pas la seule chose à fermenter. Les idées aussi. La géographie, la mémoire, l'identité. Les Trévires n'étaient pas seulement un lieu, mais un rappel : même ce que l'on brasse porte une histoire.</p>
-      <hr />
-      <div class="center-italic">Vidéo original disponible sur YouTube.</div>
-      <p class="center-italic">Autour d'une mousse · Épisode III · 2026</p>
-    </article>
-  </main>
-
-  <footer class="site-footer">
-    <p>Dernière mise à jour : 15 avril 2026</p>
-  </footer>
-
-  <div class="scroll-nav" id="scrollNav">
-    <button class="scroll-toggle" id="scrollToggle" aria-expanded="false" aria-controls="scrollPanel">
-      <span class="scroll-icon">🌙</span>
-      <span>Chapitres</span>
-      <span class="scroll-arrow">▲</span>
-      <span class="scroll-icon">☀️</span>
-    </button>
-    <div class="scroll-panel" id="scrollPanel" aria-hidden="true">
-      <nav>
-        <a href="index.html">Espace-Temps I</a>
-        <hr class="scroll-sep" />
-        <a href="episode-ii.html">Épisode II</a>
-        <a href="episode-iii.html">Épisode III</a>
-        <a href="episode-iv.html">Épisode IV</a>
-        <hr class="scroll-sep" />
-        <a href="constitution.html">Constitution</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <!-- IMAGE PRINCIPALE -->
+    <div class="header-image">
+        <img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/brasserie-de-treivire-vwNNrTfxDxKyuBzj.png" alt="Guru Bhai, Yves Cornerotte et Hale — Brasserie des Trévires, Lamorteau">
     </div>
-  </div>
 
-  <script src="scripts.js"></script>
+    <!-- BIÈRE DU JOUR -->
+    <div class="biere-du-jour">
+        <p class="biere-nom">Brune de Noël</p>
+        <p class="biere-detail">Bière artisanale de saison · Malts caramel, cannelle, fèves de cacao, rhum à la vanille, cassonade · Brassée à Lamorteau, Province de Luxembourg, Belgique<br><br><em>Explorez la magie de Noël dans chaque gorgée — riche et subtilement épicée. Une création festive et inoubliable.</em></p>
+    </div>
+
+    <!-- INTERVENANTS -->
+    <div class="intervenants">
+        <div class="intervenant">
+            <p class="intervenant-nom">Guru Bhai</p>
+            <p class="intervenant-role">Hôte. Gardien de l'exigence intellectuelle. Philosophe de la mousse.</p>
+        </div>
+        <div class="intervenant">
+            <p class="intervenant-nom">Yves Cornerotte</p>
+            <p class="intervenant-role">Co-fondateur & brasseur, Brasserie des Trévires. À moitié Charentais. Entièrement Gaumais.</p>
+        </div>
+    </div>
+
+    <!-- LE LIEU -->
+    <div class="lieu-encart">
+        <p class="lieu-nom">Brasserie des Trévires</p>
+        <p class="lieu-detail">Zone artisanale de Lamorteau, Rouvroy · Province de Luxembourg, Gaume, Belgique<br>
+        Fondée en octobre 2018 · Écoresponsable · Médaillée d'or au Concours International de Lyon<br>
+        La plus méridionale des brasseries de Belgique.</p>
+    </div>
+
+    <!-- VIDÉO -->
+    <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/-TadM467o04?si=wff0CF8wMoAinBA7" title="Autour d'une Mousse — Épisode III · À la source" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <hr>
+
+    <!-- INTRO NARRATIVE -->
+    <p>On ne cherchait pas une brasserie.</p>
+
+    <p>On cherchait une source.</p>
+
+    <p>Après l'épisode II tourné dans la brume de La Loge, il fallait aller voir. Quitter la théorie. Mettre les pieds dans le moût. Comprendre comment les quatre éléments — <em>eau, malt, houblon, levure</em> — deviennent quelque chose qui porte un nom, un visage, un territoire.</p>
+
+    <p>La réponse était en Gaume. À Lamorteau. À quelques kilomètres de la frontière luxembourgeoise. Dans ce coin de Belgique que les Celtes Trévires ont habité deux mille ans avant nous, et dont le sol garde encore la mémoire.</p>
+
+    <p>C'est là qu'Yves Cornerotte brasse. Avec Fabien et Michel. Depuis 2018.</p>
+
+    <p>C'est là qu'on a posé les verres. Et les questions.</p>
+
+    <div class="image-break circular">
+        <img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/profile-pic-2-Vfes75D6GnwvWprW.png" alt="Guru Bhai — Architecte de sens">
+    </div>
+
+    <hr>
+
+    <!-- QUESTION CENTRALE -->
+    <div class="question-centrale">
+        <p>Comment un brasseur décide-t-il de ce qu'il va mettre dans sa bière ? Où s'arrête la recette et où commence la vision ? Et qu'est-ce qu'un territoire a à faire dans un verre ?</p>
+    </div>
+
+    <hr>
+
+    <h2>Les Trévires — un nom, une dette</h2>
+
+    <p>Le nom de la brasserie n'est pas une fantaisie marketing.</p>
+
+    <p>Les Trévires étaient un peuple celte. Établi en Gaule belgique, dans cette région qu'on appelle aujourd'hui la Gaume. Reconnus dans l'Antiquité pour leur maîtrise agricole et leurs techniques de moisson. Une moissonneuse gauloise, découverte en 1958 à Montauban-Buzenol, porte encore leur empreinte dans la pierre.</p>
+
+    <p>Choisir ce nom, c'est assumer une filiation. Ce n'est pas un hommage décoratif. C'est une déclaration d'intention : nous brassons avec la même logique que ceux qui, avant nous, ont travaillé la terre de ce sol. <em>Recevoir. Transformer. Transmettre.</em></p>
+
+    <p>Le trinitaire, encore.</p>
+
+    <p>Comme si la philosophie du brassage précédait le brassage lui-même.</p>
+
+    <hr>
+
+    <h2>Le cognac dans la bière — ou l'héritage personnel</h2>
+
+    <p>La Recevresse est la bière signature d'Yves. Et elle contient du Cognac XO.</p>
+
+    <p>Pas par hasard. Pas par goût de l'originalité. Parce qu'Yves est à moitié Charentais. Parce que son identité est une carte à deux entrées — la Gaume et la Charente — et qu'il a voulu que les deux se retrouvent dans le même verre.</p>
+
+    <p>C'est là que la bière devient autobiographie.</p>
+
+    <p>Le malt belge porte le territoire. Le cognac porte l'histoire personnelle. Et l'assemblage — cet acte de brasseur qui décide que ces deux choses peuvent coexister — est un acte de sens autant que de chimie.</p>
+
+    <p>Il ne brasse pas une recette. Il brasse une vie.</p>
+
+    <!-- GRILLE TENSIONS -->
+    <div class="grille-tension">
+        <div class="tension-item">
+            <span class="tension-gauche">La recette est identique</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">La décision est singulière</span>
+        </div>
+        <div class="tension-item">
+            <span class="tension-gauche">Le territoire donne la matière</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">Le brasseur donne le sens</span>
+        </div>
+        <div class="tension-item">
+            <span class="tension-gauche">L'écoresponsabilité contraint</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">La contrainte libère</span>
+        </div>
+        <div class="tension-item">
+            <span class="tension-gauche">Nommer, c'est revendiquer</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">Revendiquer, c'est hériter</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- VERBATIM -->
+    <h2>Ce qui s'est dit, à Lamorteau</h2>
+
+    <div class="verbatim">
+
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">G.B.</span>
+            <p class="verbatim-parole">« Qu'est-ce que ta mousse t'a appris sur ta propre maîtrise ? »</p>
+        </div>
+
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">Y.C.</span>
+            <p class="verbatim-parole">« Brasser, c'est travailler dans le monde du vivant. On ne contrôle pas tout. On maîtrise les conditions. On fait confiance au processus. C'est un peu le reflet de ce qu'on peut faire comme travail sur soi-même. »</p>
+        </div>
+
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">G.B.</span>
+            <p class="verbatim-parole">« Vous avez mis du cognac dans une bière belge. C'est une décision ou une évidence ? »</p>
+        </div>
+
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">Y.C.</span>
+            <p class="verbatim-parole">« Je suis à moitié Charentais. Je voulais partager mes deux cultures dans le même verre. La bière n'est pas qu'une recette. Elle est une façon de raconter qui on est, d'où on vient. »</p>
+        </div>
+
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">G.B.</span>
+            <p class="verbatim-parole">« Trois brasseurs avec la même recette arriveraient à des résultats différents. Comment tu l'expliques ? »</p>
+        </div>
+
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">Y.C.</span>
+            <p class="verbatim-parole">« Les levures sont vivantes. Le bois du fût réagit différemment. L'eau du sol de chaque endroit laisse une trace. C'est ça, le terroir. Pas seulement pour le vin. Pour tout ce qui fermente. La bière mémorise l'endroit où elle est née. »</p>
+        </div>
+
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">G.B.</span>
+            <p class="verbatim-parole">« Vous avez choisi un nom celte. Vous brassez de façon écoresponsable. Vous avez refusé de produire de la bière insipide. À quel moment vous avez compris que vous faisiez autre chose que de la bière ? »</p>
+        </div>
+
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">Y.C.</span>
+            <p class="verbatim-parole">« Pour être brasseur, il faut aimer les gens. Sinon on se perd. La bière est un lubrifiant social. Mais si on n'est pas passionné, ça se sentira dans le produit. C'est comme un peintre qui peint par habitude. Il n'y a plus d'âme. »</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h2>La Recevresse — une bière qui porte un nom de femme</h2>
+
+    <p>La Recevresse rend hommage à la Vierge Recevresse d'Avioth. Un monument gothique flamboyant. Une découverte miraculeuse, selon la tradition locale. Une Vierge Noire que l'on a trouvée dans la terre — et qui est restée.</p>
+
+    <p>Il y a dans ce choix quelque chose de fondamental à la philosophie des Trévires. <em>Ce qui est reçu du sol est sacré.</em> Ce qui pousse de la terre mérite un nom. Et une attention.</p>
+
+    <p>La bière n'est pas un produit. C'est une mémoire mise en bouteille.</p>
+
+    <p>Au nez : des arômes de malt, de cognac, des notes de chocolat et de café. En bouche : une rondeur soyeuse, des pointes d'alcool qui construisent une dégustation chaleureuse. Un col de mousse crémeux qui tient.</p>
+
+    <p>Et quelque chose d'indéfinissable. Ce que tous les bons brasseurs savent faire sans pouvoir l'expliquer. Ce qu'on appelle, faute de mieux, <em>l'âme du brassin</em>.</p>
+
+    <div class="image-break portrait">
+        <img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/img_6287-to8AHVYW1gBag42w.jpg" alt="Dans la salle de brassage — Brasserie des Trévires">
+        <p class="image-caption">La mousse n'est pas le sujet. Elle est le prétexte à la question qui suit.</p>
+    </div>
+
+    <hr>
+
+    <h2>L'écoresponsabilité comme posture intellectuelle</h2>
+
+    <p>La brasserie des Trévires chauffe ses cuves au bois local. Un bois fourni par un agriculteur du coin. L'eau du sous-sol gaumais entre dans chaque brassin. Les déchets sont pensés, le CO2 réintégré dans le process autant que possible.</p>
+
+    <p>Ce n'est pas une contrainte subie. C'est une cohérence choisie.</p>
+
+    <p>Et cette cohérence éclaire quelque chose de plus large, que cet épisode tente de formuler : <em>les meilleures décisions créatives naissent rarement de la liberté totale. Elles naissent de contraintes assumées.</em></p>
+
+    <p>Le brasseur qui doit travailler avec les ressources de son sol invente davantage que celui qui peut tout acheter. Le brasseur qui refuse le sucre ajouté, l'arôme artificiel, la levure industrielle — celui-là est obligé de comprendre ses ingrédients autrement. Plus en profondeur.</p>
+
+    <p>La contrainte écoresponsable n'appauvrit pas la bière. Elle l'oblige à être meilleure.</p>
+
+    <hr>
+
+    <h2>La transmission — sans impératif</h2>
+
+    <p>La question de la succession est arrivée naturellement. Comme elle arrive toujours quand on parle d'artisanat passionné.</p>
+
+    <p>Yves la pose clairement : on ne peut pas transmettre ce qu'on a construit avec passion à quelqu'un qui n'est pas passionné. Ce serait trahir le produit autant que l'idée. Un financier qui rachète une microbrasserie pour en faire une marque ne transmet pas. Il efface.</p>
+
+    <p><em>La transmission se fait avec des gens qui ont envie de continuer cette passion.</em></p>
+
+    <p>Recevoir. Transformer. Transmettre.</p>
+
+    <p>Le trinitaire revient. Encore. Comme s'il était inscrit dans la logique même du brassage. Comme si tout acte créatif qui dure était structuré par ce même mouvement.</p>
+
+    <p>Ce qu'on reçoit des ancêtres — les Trévires, les Compagnons du Devoir, les moines brasseurs — on le transforme selon ce qu'on est. Et on le transmet à ceux qui voudront bien le recevoir avec soin.</p>
+
+    <p>Pas à n'importe qui. À ceux qui ont compris pourquoi ça compte.</p>
+
+    <hr>
+
+    <h2>Ce que la visite a révélé</h2>
+
+    <p>On attendait une interview sur la bière.</p>
+
+    <p>On a eu une conversation sur le sens.</p>
+
+    <p>Yves n'a pas parlé de recettes. Il a parlé de choix. De passion comme condition sine qua non. De territoire comme contrainte féconde. D'héritage — personnel, culturel, celtique — comme matière première invisible.</p>
+
+    <p>Il a parlé comme quelqu'un qui sait que ce qu'il fait est plus grand que ce qu'il fait.</p>
+
+    <p>Et c'est exactement le profil de l'<em>Inconfortable lucide</em> qu'Autour d'une mousse cherche à réunir. Des praticiens qui ont dépassé le stade de l'enthousiasme naïf sans tomber dans le désengagement. Des artisans qui ont compris que simplifier trop tôt est une faute — qu'elle soit intellectuelle ou brassicole.</p>
+
+    <div class="grille-tension">
+        <div class="tension-item">
+            <span class="tension-gauche">La passion nourrit le produit</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">Le produit révèle la passion</span>
+        </div>
+        <div class="tension-item">
+            <span class="tension-gauche">La Gaume est un sol</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">La Gaume est un argument</span>
+        </div>
+        <div class="tension-item">
+            <span class="tension-gauche">Brasser, c'est maîtriser</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">Maîtriser, c'est accepter</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- CONCLUSION -->
+    <div class="conclusion-finale">
+        <p>« Les verres sont vides.<br>
+        Dehors, la Gaume est silencieuse.<br>
+        La Recevresse a fait son travail.<br>
+        Elle n'a pas donné de réponse.<br>
+        Elle a ouvert la question suivante. »</p>
+    </div>
+
+    <!-- PROCHAIN ÉPISODE -->
+    <div class="prochainement">
+        <p><em>Autour d'une mousse — la bière au pain</em></p>
+        <p>Upcycling. Ce qui transforme le perdu sans qu'on le voit. Ce que les brasseurs appellent le travail du vivant.</p>
+        <p style="font-size: 0.82rem; color: var(--accent);">Prochain épisode : Du pain solide au pain liquide — ce qui se passe quand on réfléchit.</p>
+    </div>
+
+    <div class="image-break engraving">
+        <img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/autour-d-une-mousse-v6bJ3FaXsDTsRdii.png" alt="Autour d'une mousse — la brasserie comme espace de pensée">
+    </div>
+
+    <hr>
+
+    <!-- SIGNATURE -->
+    <div class="signature">
+        <p class="name">Guru Bhai &amp; Hale</p>
+        <p class="title">Architectes des sens · La philosophie d'Autour d'une mousse</p>
+        <p style="margin-top: 1rem;"><em>Cet épisode a été tourné à Lamorteau, dans la province de Luxembourg belge. En Gaume. Sur le territoire des Trévires.</em></p>
+        <p><em>La mousse était la Recevresse. Le sujet était la décision. Et l'âme était dans chaque gorgée.</em></p>
+    </div>
+
+    <p class="video-mention">Vidéo originale disponible sur YouTube.</p>
+
+    <footer>
+        <p>Épisode III · 2026</p>
+    </footer>
+
 </body>
 </html>

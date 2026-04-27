@@ -1,0 +1,6 @@
+{
+  "name": "autourdunemousse",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=/"
+  }
+}

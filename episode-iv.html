@@ -1,226 +1,658 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <link rel="icon" type="image/webp" href="/favicon.webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="La Deuxième Vie. À la Micro-Brasserie du Chaudron, Alain brasse depuis 19 ans avec du pain rassis et des équipements récupérés. Épisode IV." />
-    <meta property="og:title" content="Épisode IV — La Deuxième Vie | Autour d'une Mousse" />
+    <meta property="og:title" content="Épisode IV - La Deuxième Vie | Autour d'une Mousse" />
     <meta property="og:description" content="La Deuxième Vie. À la Micro-Brasserie du Chaudron, Alain brasse depuis 19 ans avec du pain rassis et des équipements récupérés. Épisode IV." />
     <meta property="og:image" content="https://assets.zyrosite.com/sPyReSixwgGH10vr/img_6322-FjQJpdExmbISLWVU.JPG" />
     <meta property="og:url" content="https://autourdunemousse.fr/episode-iv.html" />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Épisode IV — La Deuxième Vie | Autour d'une Mousse" />
-    <title>Épisode IV | Autour d'une Mousse</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <meta name="twitter:title" content="Épisode IV - La Deuxième Vie | Autour d'une Mousse" />
+    <title>Épisode IV - La Deuxième Vie · Autour d'une Mousse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --fond: #f6eee3;
+            --texte: #35282C;
+            --accent: #DBA472;
+            --secondaire: #F9D0AE;
+            --ombre: rgba(219, 164, 114, 0.12);
+        }
 
-    <main class="container">
-      <article class="content-card">
-        <h1>La Deuxième Vie</h1>
-        <p class="subtitle"><em>Autour d'une mousse · Épisode IV</em></p>
-        <p>Ce que l'on croyait usé peut encore fermenter.</p>
-        <p>Tourné à la Micro-Brasserie du Chaudron · Près de Toul, Lorraine · 2026</p>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/w595E60RFc4"
-            title="Autour d'une mousse — Épisode IV : La Micro-Brasserie du Chaudron"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+        html { font-size: 18px; }
+
+        body {
+            font-family: 'Courier Prime', 'Courier New', monospace;
+            background-color: var(--fond);
+            color: var(--texte);
+            line-height: 1.7;
+            padding: 2rem 1.5rem 4rem;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* --- EN-TÊTE --- */
+        .episode-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+        }
+
+        h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.85rem;
+            font-weight: normal;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.02em;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.25rem;
+            font-weight: normal;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--texte);
+            letter-spacing: 0.02em;
+        }
+
+        p { margin-bottom: 1.5rem; }
+
+        em { font-style: italic; color: var(--accent); }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+        }
+
+        a:hover { color: var(--texte); border-bottom-color: var(--texte); }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--secondaire);
+            margin: 3rem 0;
+        }
+
+        .subtitle {
+            font-family: 'Courier Prime', monospace;
+            font-style: italic;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .episode-meta {
+            font-size: 0.82rem;
+            color: var(--accent);
+            opacity: 0.75;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* --- VIDÉO --- */
+        .video-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin: 2.5rem 0;
+            border: 1px solid var(--secondaire);
+            background: var(--texte);
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-mention {
+            text-align: center;
+            font-style: italic;
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin: 2.5rem 0 1rem;
+        }
+
+        /* --- BIÈRE DU JOUR --- */
+        .biere-du-jour {
+            border: 1px solid var(--secondaire);
+            background: linear-gradient(135deg, rgba(249, 208, 174, 0.18) 0%, transparent 60%);
+            padding: 1.6rem 1.8rem;
+            margin: 2.5rem 0;
+            position: relative;
+        }
+
+        .biere-du-jour::before {
+            content: "BIÈRE DU JOUR";
+            position: absolute;
+            top: -0.6rem;
+            left: 1.2rem;
+            background: var(--fond);
+            padding: 0 0.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .biere-nom {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: var(--texte);
+        }
+
+        .biere-detail {
+            font-size: 0.88rem;
+            color: var(--accent);
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* --- INTERVENANTS --- */
+        .intervenants {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .intervenant {
+            border-top: 2px solid var(--accent);
+            padding-top: 1rem;
+        }
+
+        .intervenant-nom {
+            font-family: 'Special Elite', cursive;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            color: var(--texte);
+        }
+
+        .intervenant-role {
+            font-size: 0.82rem;
+            color: var(--accent);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* --- LIEU --- */
+        .lieu-encart {
+            border: 1px solid var(--secondaire);
+            background: linear-gradient(135deg, rgba(249, 208, 174, 0.10) 0%, transparent 60%);
+            padding: 1.4rem 1.6rem;
+            margin: 2.5rem 0;
+            position: relative;
+        }
+
+        .lieu-encart::before {
+            content: "LE LIEU";
+            position: absolute;
+            top: -0.6rem;
+            left: 1.2rem;
+            background: var(--fond);
+            padding: 0 0.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            color: var(--accent);
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .lieu-nom {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .lieu-detail {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-style: italic;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* --- QUESTION CENTRALE --- */
+        .question-centrale {
+            border-left: 3px solid var(--accent);
+            padding: 1.2rem 1.5rem;
+            margin: 2.5rem 0;
+            background: var(--ombre);
+        }
+
+        .question-centrale p {
+            margin-bottom: 0;
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.65;
+        }
+
+        /* --- VERBATIM --- */
+        .verbatim {
+            margin: 2.5rem 0;
+            padding: 0 1rem;
+        }
+
+        .verbatim-ligne {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+            align-items: flex-start;
+        }
+
+        .verbatim-locuteur {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.82rem;
+            color: var(--accent);
+            white-space: nowrap;
+            padding-top: 0.15rem;
+            min-width: 2.8rem;
+        }
+
+        .verbatim-parole {
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--texte);
+            margin-bottom: 0;
+        }
+
+        /* --- IMAGES --- */
+        .image-break { margin: 3rem 0; text-align: center; }
+        .image-break img { max-width: 100%; height: auto; }
+        .image-break.engraving img { max-width: 100%; opacity: 0.95; }
+
+        /* --- GRILLE TENSIONS --- */
+        .grille-tension { margin: 2.5rem 0; }
+
+        .tension-item {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 0.8rem;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+        }
+
+        .tension-gauche {
+            text-align: right;
+            color: var(--texte);
+            font-style: italic;
+        }
+
+        .tension-fleche { color: var(--accent); font-size: 1.1rem; }
+
+        .tension-droite {
+            color: var(--accent);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* --- CONCLUSION --- */
+        .conclusion-finale {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin: 3rem 0;
+            border-top: 1px solid var(--secondaire);
+            border-bottom: 1px solid var(--secondaire);
+        }
+
+        .conclusion-finale p {
+            font-style: italic;
+            color: var(--accent);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        /* --- CODA HALE --- */
+        .coda-hale {
+            margin: 4rem 0 3rem;
+            padding: 2.5rem 0;
+            border-top: 2px solid var(--accent);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .coda-hale h2 {
+            margin-top: 0;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .coda-hale p {
+            margin-bottom: 1.2rem;
+            font-size: 0.98rem;
+        }
+
+        .coda-hale p:last-child { margin-bottom: 0; }
+
+        .coda-hale em { color: var(--accent); font-style: italic; }
+
+        /* --- SIGNATURE & FOOTER --- */
+        .signature {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--secondaire);
+        }
+
+        .signature p { margin-bottom: 0.5rem; font-size: 0.9rem; }
+
+        .signature .name {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .signature .title { color: var(--accent); font-style: italic; }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--secondaire);
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        footer nav { margin-top: 1rem; }
+
+        footer nav a { margin-right: 1.5rem; border-bottom: none; }
+
+        footer nav a:hover { border-bottom: 1px solid var(--texte); }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 600px) {
+            html { font-size: 16px; }
+            body { padding: 1.5rem 1rem 3rem; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.1rem; }
+
+            .intervenants {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .tension-item { grid-template-columns: 1fr; text-align: left; }
+            .tension-gauche { text-align: left; }
+            .tension-fleche { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- EN-TÊTE -->
+    <p class="episode-label">Autour d'une mousse · Épisode IV</p>
+
+    <h1>La Deuxième Vie</h1>
+    <p class="subtitle">Ce que l'on croyait usé peut encore fermenter.</p>
+    <p class="episode-meta">Tourné à la Micro-Brasserie du Chaudron · Chaudeney-sur-Moselle, près de Toul · Lorraine · 2026</p>
+
+    <hr>
+
+    <!-- VIDÉO -->
+    <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/w595E60RFc4?si=BqVmoB-PpChnCNKc" title="Autour d'une Mousse - Épisode IV · La Deuxième Vie" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- BIÈRE DU JOUR -->
+    <div class="biere-du-jour">
+        <p class="biere-nom">La Bière au Pain</p>
+        <p class="biere-detail">Bière blanche artisanale · Un tiers de pain rassis, deux tiers de malt d'orge · Brassée à Chaudeney-sur-Moselle, Lorraine<br><br><em>Une recette vieille comme l'Égypte, réinventée dans une brasserie lorraine. Le pain n'est pas un ingrédient de remplacement. C'est l'ingrédient originel.</em></p>
+    </div>
+
+    <!-- INTERVENANTS -->
+    <div class="intervenants">
+        <div class="intervenant">
+            <p class="intervenant-nom">Guru Bhai</p>
+            <p class="intervenant-role">Hôte. Gardien de l'exigence intellectuelle. Philosophe de la mousse.</p>
+        </div>
+        <div class="intervenant">
+            <p class="intervenant-nom">Hale</p>
+            <p class="intervenant-role">Frère de pensée. Co-créateur. Passionné capteur de lumière.</p>
+        </div>
+        <div class="intervenant">
+            <p class="intervenant-nom">Alain</p>
+            <p class="intervenant-role">Maître brasseur. Professeur de physique-chimie. Brasseur depuis 1998.</p>
+        </div>
+    </div>
+
+    <!-- LE LIEU -->
+    <div class="lieu-encart">
+        <p class="lieu-nom">Micro-Brasserie du Chaudron</p>
+        <p class="lieu-detail">Chaudeney-sur-Moselle, près de Toul · Lorraine, France<br>
+        Fondée en octobre 2007 · 19 ans de brassage artisanal<br>
+        50 hectolitres par an · Brassins de 150 litres<br>
+        La brasserie du coin de la cour. Littéralement à dix mètres de la maison.</p>
+    </div>
+
+    <hr>
+
+    <!-- INTRO NARRATIVE -->
+    <p>On ne cherchait pas une leçon.</p>
+
+    <p>On cherchait quelqu'un qui avait choisi de ne pas tout miser.</p>
+
+    <p>Alain est professeur de physique-chimie au lycée de Toul. Il l'est resté. Quand il a ouvert sa brasserie en 2007, il a dit à sa femme : <em>« Je garde mon boulot de prof. »</em> Trois enfants. Un vieux bâtiment délabré à rénover. Un volume contraint. Une décision lucide.</p>
+
+    <p>Et depuis dix-neuf ans, il brasse cinquante hectolitres par an, dans des brassins de cent cinquante litres, avec des équipements qui ont eu d'autres vies avant lui.</p>
+
+    <p>C'est cela, la Micro-Brasserie du Chaudron.</p>
+
+    <p>Pas une aventure entrepreneuriale. Une conviction tranquille.</p>
+
+    <hr>
+
+    <!-- QUESTION CENTRALE -->
+    <div class="question-centrale">
+        <p>Pourquoi gardons-nous certaines choses, et en jetons-nous d'autres ? Et qu'est-ce qu'un brasseur qui refuse de jeter le pain a-t-il à nous dire sur ce que nous appelons l'usure ?</p>
+    </div>
+
+    <hr>
+
+    <h2>Les chaudrons du lycée</h2>
+
+    <p>Le nom de la brasserie n'est pas une fantaisie. Il vient d'un objet. De deux objets, plus exactement.</p>
+
+    <p>Lors d'une rénovation du vieux lycée de Toul, deux cuisinières industrielles de deux cents kilos chacune attendaient dans un coin. Trop lourdes pour être emportées. Trop précises pour être détruites.</p>
+
+    <p>En 2005, Alain avait un projet de brasserie. Il est allé voir l'intendant du lycée. Quelques mois de sympathie plus tard, cinq copains, une voiture avec une benne, deux cents kilos de fonte à porter par escalier. Les deux cuisinières ont atterri dans le vieux bâtiment délabré derrière la maison.</p>
+
+    <p>Elles y sont encore. Elles chauffent encore les brassins.</p>
+
+    <p>Elles n'ont pas changé de métier. <em>Elles ont changé de matière.</em></p>
+
+    <p>Des chaudrons. Le nom s'est imposé de lui-même.</p>
+
+    <hr>
+
+    <h2>Le pain rassis et les Égyptiens</h2>
+
+    <p>En 2009, Alain cherchait une troisième bière. Il avait déjà sa blonde - la Valburge, nommée d'après l'église Sainte-Valburge de Chaudeney. Il voulait une blanche.</p>
+
+    <p>En lisant de vieux ouvrages sur la bière, une phrase revenait : <em>les Égyptiens faisaient leur bière avec du pain.</em></p>
+
+    <p>Il a creusé. Un historien le lui a confirmé. Les Égyptiens fabriquaient de petits pâtés de céréales à moitié écrasées, les faisaient cuire, puis les faisaient tremper. La fermentation naturelle faisait le reste. Ils aromatisaient au miel et aux plantes.</p>
+
+    <p>C'était leur bière.</p>
+
+    <p>Plus tard, au Moyen Âge, les femmes brassaient la <em>bière de ménage</em> avec des restants de pain. Le geste existait depuis quatre mille ans. Personne ne l'avait inventé. Tout le monde l'avait oublié.</p>
+
+    <p>Alain l'a retrouvé.</p>
+
+    <p>Un tiers de pain rassis concassé en morceaux gros comme le pouce. Deux tiers de malt d'orge. La recette était bonne dès le premier brassin. Il n'a pas cherché à l'optimiser.</p>
+
+    <!-- GRILLE TENSIONS -->
+    <div class="grille-tension">
+        <div class="tension-item">
+            <span class="tension-gauche">Le pain rassis est un déchet</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">Le pain rassis est un grain</span>
+        </div>
+        <div class="tension-item">
+            <span class="tension-gauche">Quatre mille ans nous précèdent</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">Quatre mille ans nous éclairent</span>
+        </div>
+        <div class="tension-item">
+            <span class="tension-gauche">L'enseignant brasse</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">Le brasseur enseigne</span>
+        </div>
+        <div class="tension-item">
+            <span class="tension-gauche">Le petit volume contraint</span>
+            <span class="tension-fleche">→</span>
+            <span class="tension-droite">Le petit volume libère</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- VERBATIM -->
+    <h2>Ce qui s'est dit, à côté de Toul</h2>
+
+    <div class="verbatim">
+
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">G.B.</span>
+            <p class="verbatim-parole">« D'où t'est venue l'idée de mettre du pain dans la bière ? »</p>
         </div>
 
-        <hr />
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">Alain</span>
+            <p class="verbatim-parole">« Je n'ai rien inventé. Les Égyptiens faisaient la bière au pain. Dans les bières blanches, une partie du malt de blé est remplacée par du pain. Le pain, c'est du blé. Donc je me suis dit : je vais faire une bière blanche originale, et au lieu du malt de blé, je mets du pain rassis. »</p>
+        </div>
 
-        <h3>La bière du soir</h3>
-        <p>
-          <strong>La Bière au Pain</strong><br />
-          Bière blanche artisanale · Un tiers pain rassis, deux tiers malt d'orge ·
-          Brassée à Chaudeney-sur-Moselle, Lorraine<br />
-          <em>Une recette vieille comme l'Égypte, réinventée dans une brasserie lorraine. Le pain n'est pas un ingrédient de remplacement, c'est l'ingrédient originel.</em>
-        </p>
-        <hr />
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">Alain</span>
+            <p class="verbatim-parole">« Dans ma tête, ça fait tilt. Bière au pain. »</p>
+        </div>
 
-        <h3>Les participants</h3>
-        <p>
-          <strong>Guru Bhai</strong><br />Hôte. Gardien de l'exigence intellectuelle. Philosophe de la mousse.
-        </p>
-        <p>
-          <strong>Hale</strong><br />Frère de pensée. Co-créateur. Passionné capteur de lumière.
-        </p>
-        <p>
-          <strong>Alain</strong><br />Maître brasseur, Micro-Brasserie du Chaudron. Professeur de physique-chimie au lycée de Toul. Brasseur amateur depuis 1998. Fondateur de la brasserie en 2007.
-        </p>
-        <p>
-          <strong>Micro-Brasserie du Chaudron</strong><br />
-          Chaudeney-sur-Moselle, près de Toul, Lorraine · Fondée en octobre 2007 ·
-          19 ans de brassage artisanal · 50 hectolitres par an · Brassins de 150 litres<br />
-          La brasserie du coin de la cour, littéralement à dix mètres de la maison.
-        </p>
-        <hr />
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">G.B.</span>
+            <p class="verbatim-parole">« Tu n'as jamais voulu lâcher l'enseignement pour ne faire que ça ? »</p>
+        </div>
 
-        <p>
-          On ne cherchait pas une leçon. On cherchait quelqu'un qui avait choisi
-          de ne pas tout miser.
-        </p>
-        <p>
-          Alain est professeur de physique-chimie à Toul. Il l'est resté. Quand
-          il a ouvert sa brasserie en 2007, il a dit à sa femme : <em>"Je garde mon
-          boulot de prof."</em> Trois enfants. Un vieux bâtiment délabré à rénover. Un
-          volume contraint. Une décision lucide. Et depuis dix-neuf ans, il brasse
-          50 hectolitres par an, dans des brassins de 150 litres, avec des
-          équipements qui ont eu d'autres vies avant lui.
-        </p>
-        <p>
-          C'est cela, la Micro-Brasserie du Chaudron. Pas une aventure entrepreneuriale.
-          Une conviction tranquille.
-        </p>
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">Alain</span>
+            <p class="verbatim-parole">« Quand j'ai démarré en 2007, j'ai dit à ma femme : je garde mon boulot de prof. Trois enfants, un bâtiment à rénover, je ne pouvais pas tout miser. Et puis c'est presque du télétravail, en fait. J'ai juste à descendre les escaliers pour être à la brasserie. »</p>
+        </div>
 
-        <h2>Les chaudrons du lycée</h2>
-        <p>
-          Après une rénovation du vieux lycée. Deux vieilles cuisinières
-          industrielles de 200 kg chacune attendaient dans un coin. En 2005,
-          Alain avait un projet de brasserie. Il est allé voir l'intendant du
-          lycée. Quelques mois de sympathie plus tard, la suite vous la connaissez...
-        </p>
-        <p>
-          Cinq copains, une voiture avec une benne, 200 kg de fonte à porter,
-          et les deux cuisinières ont atterri dans le vieux bâtiment délabré
-          derrière la maison. Elles y sont encore. Elles chauffent encore les
-          brassins. Elles n'ont pas changé de métier. Elles ont changé de matière.
-        </p>
-        <p>
-          Des chaudrons. Le nom s'est imposé de lui-même.
-        </p>
+        <div class="verbatim-ligne">
+            <span class="verbatim-locuteur">G.B.</span>
+            <p class="verbatim-parole">« Voilà, c'était autour d'une mousse. Merci d'avoir regardé - et surtout, merci à notre cher Alain. »</p>
+        </div>
 
-        <h2>Le pain rassis et les Égyptiens</h2>
-        <p>
-          En 2009, Alain cherchait une troisième bière. Il avait déjà une blonde, la Valburge,
-          nommée d'après l'église Sainte-Valburge de Chaudeney et une autre.
-          Il voulait une blanche. Mais en lisant de vieux bouquins sur la bière,
-          une phrase revenait : les Égyptiens faisaient leur bière avec du pain.
-        </p>
-        <p>
-          Il a creusé. Un historien de la bière lui a confirmé :
-          les Égyptiens fabriquaient de petits pâtés de céréales à moitié écrasées,
-          les faisaient cuire, les faisaient tremper. La fermentation naturelle
-          faisait le reste. Ils aromatisaient avec du miel et des plantes.
-          C'était leur bière.
-        </p>
-        <blockquote>
-          « Dans ma tête, ça fait tilt. Bière au pain. »
-        </blockquote>
-        <p>
-          Il n'a rien inventé. Au Moyen Âge, les femmes faisaient de la bière
-          de ménage avec des restants de pain. Le geste existait. Alain l'a
-          retrouvé. Un tiers de pain rassis concassé en morceaux gros comme le
-          pouce. Deux tiers de malt d'orge. La recette était bonne dès le
-          premier brassin. Il n'a pas cherché à l'optimiser.
-        </p>
+    </div>
 
-        <h2>Ce qui s'est dit, à côté de Toul</h2>
-        <blockquote>
-          « Je n'ai rien inventé, les Égyptiens faisaient la bière au pain.
-          Dans les bières blanches, une partie du malt de blé est remplacée par du
-          pain. Le pain, c'est du blé. Donc je me suis dit : je vais faire une bière
-          blanche originale, et au lieu du malt de blé, je mets du pain rassis. »
-        </blockquote>
-        <blockquote>
-          « C'est presque du télétravail, en fait. J'ai juste à descendre les
-          escaliers pour être à la brasserie. »
-        </blockquote>
+    <hr>
 
-        <h2>La deuxième vie comme principe</h2>
-        <p>
-          À la Brasserie du Chaudron, rien ne se jette vraiment. Les cuisinières
-          du lycée ont trouvé un second usage. Le pain rassis récupéré à la
-          maison et quelquefois demandé à la boulangerie voisine qui devient
-          une nouvelle fois matière première. Le vieux bâtiment délabré est devenu une brasserie.
-          Même les seaux blancs de fermentation sont ceux qu'Alain utilisait
-          dans sa cave en 1998, quand il brassait 20 litres pour les repas entre
-          amis.
-        </p>
-        <p>
-          Ce n'est pas de la nostalgie. C'est une logique. Ce qui a prouvé sa
-          valeur continue. Ce qui peut encore servir, sert.
-        </p>
-        <p>
-          Et parfois, les choses qu'on croyait épuisées comme un bout de pain, un
-          vieux chaudron, une idée ancienne de 4 000 ans fermentent encore
-          et donnent quelque chose d'inattendu.
-        </p>
+    <h2>La deuxième vie comme principe</h2>
 
-        <h2>Dix-neuf ans à petite échelle</h2>
-        <p>
-          50 hectolitres à l'année. C'est resté petit parmi les petits. Alain
-          le dit sans complexe : ceux qui font de la brasserie leur unique
-          activité sont obligés de produire 150, 300, 400 hectolitres. Lui a
-          gardé son poste d'enseignant. La brasserie n'a jamais eu à nourrir
-          toute la famille. Elle a eu à tenir sa promesse : faire une bière
-          honnête, dans un lieu honnête, à une échelle qui ne trahit pas
-          le geste.
-        </p>
-        <p>
-          Dix-neuf ans plus tard, il reste quatre bouteilles de bière au pain.
-          Il faut se dépêcher. Et puis il faut rebrassin.
-        </p>
-        <blockquote>
-          « Voilà, c'était autour d'une mousse. Merci d'avoir regardé et
-          surtout, merci à notre cher Alain. »
-        </blockquote>
-        <h2>Hale Le frère de pensée</h2>
-        <p>
-          Autour d'une mousse n'existe pas sans Hale. Ce n'est pas une formule.
-          C'est une vérité de structure.
-        </p>
-        <p>
-          Hale n'est pas le caméraman. Il n'est pas le technicien, ni simple spectateur.
-          Il est protagoniste, un pillier.
-        </p>
-        <p>
-          Et c'est précisément pour cela que l'édifice tient.
-        </p>
+    <p>À la Brasserie du Chaudron, rien ne se jette vraiment.</p>
 
-        <hr />
-        <div class="center-italic">Vidéo originale disponible sur YouTube.</div>
-        <p class="center-italic">Autour d'une mousse · Épisode IV · 2026</p>
-      </article>
-    </main>
+    <p>Les cuisinières du lycée ont trouvé un second usage. Le pain rassis - récupéré à la maison, parfois demandé à la boulangerie voisine - devient une nouvelle fois matière première. Le vieux bâtiment délabré est devenu une brasserie. Même les seaux blancs de fermentation sont ceux qu'Alain utilisait dans sa cave en 1998, quand il brassait vingt litres pour les repas entre amis.</p>
 
-    <footer class="site-footer">
-      <p>Dernière mise à jour : 27 avril 2026</p>
+    <p>Ce n'est pas de la nostalgie. C'est une logique.</p>
+
+    <p><em>Ce qui a prouvé sa valeur continue. Ce qui peut encore servir, sert.</em></p>
+
+    <p>Et parfois, les choses qu'on croyait épuisées - un bout de pain, un vieux chaudron, une idée ancienne de quatre mille ans - fermentent encore. Et donnent quelque chose d'inattendu.</p>
+
+    <hr>
+
+    <h2>Dix-neuf ans à petite échelle</h2>
+
+    <p>Cinquante hectolitres à l'année. C'est resté petit parmi les petits.</p>
+
+    <p>Alain le dit sans complexe. Ceux qui font de la brasserie leur unique activité sont obligés de produire cent cinquante, trois cents, quatre cents hectolitres pour vivre. Lui a gardé son poste d'enseignant. La brasserie n'a jamais eu à nourrir toute la famille.</p>
+
+    <p>Elle a eu à tenir une autre promesse : <em>faire une bière honnête, dans un lieu honnête, à une échelle qui ne trahit pas le geste.</em></p>
+
+    <p>Dix-neuf ans plus tard, il reste quatre bouteilles de bière au pain. Il faut se dépêcher.</p>
+
+    <p>Et puis, il faut rebrassin.</p>
+
+    <hr>
+
+    <!-- CONCLUSION ATMOSPHÉRIQUE -->
+    <div class="conclusion-finale">
+        <p>« Il reste quatre bouteilles.<br>
+        Les chaudrons attendent.<br>
+        Le rebrassin est pour bientôt.<br>
+        Et la deuxième vie continue. »</p>
+    </div>
+
+    <!-- CODA HALE -->
+    <div class="coda-hale">
+        <h2>Hale - le frère de pensée</h2>
+
+        <p>Autour d'une mousse n'existe pas sans Hale.</p>
+
+        <p>Ce n'est pas une formule. C'est une vérité de structure.</p>
+
+        <p>Hale n'est pas le caméraman. Il n'est pas le technicien. Il n'est pas un simple spectateur.</p>
+
+        <p>Il est <em>protagoniste</em>. Un pilier.</p>
+
+        <p>Et c'est précisément pour cela que l'édifice tient.</p>
+    </div>
+
+    <div class="image-break engraving">
+        <img src="https://assets.zyrosite.com/sPyReSixwgGH10vr/autour-d-une-mousse-v6bJ3FaXsDTsRdii.png" alt="Autour d'une mousse - la brasserie comme espace de pensée">
+    </div>
+
+    <hr>
+
+    <!-- SIGNATURE -->
+    <div class="signature">
+        <p class="name">Guru Bhai &amp; Hale</p>
+        <p class="title">Architectes des sens · La philosophie d'Autour d'une mousse</p>
+        <p style="margin-top: 1rem;"><em>Cet épisode a été tourné à Chaudeney-sur-Moselle, dans une brasserie qui a la taille d'une cour. Près de Toul. Sur le territoire de la Lorraine.</em></p>
+        <p><em>La mousse était la Bière au Pain. Le sujet était la deuxième vie. Et l'âme était dans chaque chaudron.</em></p>
+    </div>
+
+    <p class="video-mention">Vidéo originale disponible sur YouTube.</p>
+
+    <footer>
+        <p>Épisode IV · 2026</p>
     </footer>
 
     <div class="scroll-nav" id="scrollNav">
-      <button class="scroll-toggle" id="scrollToggle" aria-expanded="false" aria-controls="scrollPanel">
-        <span class="scroll-icon">🌙</span>
-        <span>Chapitres</span>
-        <span class="scroll-arrow">▲</span>
-        <span class="scroll-icon">☀️</span>
-      </button>
-      <div class="scroll-panel" id="scrollPanel" aria-hidden="true">
-        <nav>
-          <a href="index.html">Espace-Temps I</a>
-          <hr class="scroll-sep" />
-          <a href="episode-ii.html">Épisode II</a>
-          <a href="episode-iii.html">Épisode III</a>
-          <a href="episode-iv.html">Épisode IV</a>
-          <hr class="scroll-sep" />
-          <a href="constitution.html">Constitution</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
+        <button class="scroll-toggle" id="scrollToggle" aria-expanded="false" aria-controls="scrollPanel">
+            <span class="scroll-icon">🌙</span>
+            <span>Chapitres</span>
+            <span class="scroll-arrow">▲</span>
+            <span class="scroll-icon">☀️</span>
+        </button>
+        <div class="scroll-panel" id="scrollPanel" aria-hidden="true">
+            <nav>
+                <a href="index.html">Espace-Temps I</a>
+                <hr class="scroll-sep" />
+                <a href="episode-ii.html">Épisode II</a>
+                <a href="episode-iii.html">Épisode III</a>
+                <a href="episode-iv.html">Épisode IV</a>
+                <hr class="scroll-sep" />
+                <a href="constitution.html">Constitution</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </div>
 
     <script src="scripts.js"></script>
-  </body>
+</body>
 </html>

@@ -11,17 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Autour d'une Mousse</a>
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="episode-ii.html">Épisode II</a>
-        <a href="episode-iii.html">Épisode III</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
   <main class="container">
     <article class="content-card">
@@ -46,6 +35,27 @@
   <footer class="site-footer">
     <p>Dernière mise à jour : 15 avril 2026</p>
   </footer>
+
+  <div class="scroll-nav" id="scrollNav">
+    <button class="scroll-toggle" id="scrollToggle" aria-expanded="false" aria-controls="scrollPanel">
+      <span class="scroll-icon">🌙</span>
+      <span>— Navigation —</span>
+      <span class="scroll-arrow">▲</span>
+      <span class="scroll-icon">☀️</span>
+    </button>
+    <div class="scroll-panel" id="scrollPanel" aria-hidden="true">
+      <nav>
+        <a href="index.html">Accueil</a>
+        <hr class="scroll-sep" />
+        <a href="episode-ii.html">Épisode II</a>
+        <a href="episode-iii.html">Épisode III</a>
+        <a href="episode-iv.html">Épisode IV</a>
+        <hr class="scroll-sep" />
+        <a href="constitution.html">Constitution</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
 
   <script src="scripts.js"></script>
 </body>
